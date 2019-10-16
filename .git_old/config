@@ -1,0 +1,21 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	logallrefupdates = true
+	precomposeunicode = true
+	bare = false
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+	rebase = false
+[remote "Gitlab"]
+	url = http://gitlab.verademo.com/coby2/verademo.git
+	pushurl = http://gitlab.verademo.com/coby2/verademo.git
+	push = +HEAD:refs/heads/master
+	fetch = refs/heads/master:refs/remotes/Gitlab/master
+[remote "old-origin"]
+	url = http://gitlab.verademo.com/coby2/verademo.git
+	fetch = +refs/heads/*:refs/remotes/old-origin/*
+[remote "origin"]
+	url = http://gitlab.verademo.com/coby2/verademo.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
