@@ -4,7 +4,7 @@ stages:
   - scan
 
 build_job:
-  image: maven:3.6.0-jdk-8
+  image: maven:3.6.2-jdk-8
   stage: build
   script:
     - mvn clean package
