@@ -6,6 +6,8 @@ stages:
 build_job:
   image: maven:3.6.0-jdk-8
   stage: build
+  environment:
+    - CI_SERVER_HOST: gitlab
   script:
     - mvn clean package
   artifacts:
