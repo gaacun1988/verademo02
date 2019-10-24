@@ -6,11 +6,12 @@ stages:
 build_job:
   image: maven:3.6.0-jdk-8
   stage: build
-  script:
+  before_script:
     - echo $CI_JOB_ID
     - echo $CI_SERVER_HOST
     - echo $CI_REPOSITORY_URL
     - export CI_SERVER_HOST="gitlab"
+  script:
     - mvn clean package
   artifacts:
     name: verademo_julian_10_build
