@@ -7,6 +7,9 @@ build_job:
   image: maven:3.6.0-jdk-8
   stage: build
   script:
+    - echo $CI_JOB_ID
+    - echo $CI_SERVER_HOST
+    - echo $CI_REPOSITORY_URL
     - export CI_SERVER_HOST="gitlab"
     - mvn clean package
   artifacts:
