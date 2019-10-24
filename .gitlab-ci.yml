@@ -6,9 +6,8 @@ stages:
 build_job:
   image: maven:3.6.0-jdk-8
   stage: build
-  environment:
-    - CI_SERVER_HOST: gitlab
   script:
+    - export CI_SERVER_HOST="gitlab"
     - mvn clean package
   artifacts:
     name: verademo_julian_10_build
