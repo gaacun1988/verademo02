@@ -7,7 +7,7 @@ public class Blab {
 
 	private int id;
 	private String content;
-	private Date postDate;
+	private Date postDate; 
 	private int commentCount;
 	private Blabber author;
 
