@@ -14,7 +14,7 @@ public class Blab {
 	private final SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy");
 
 	public Blab() {
-		// Empty constructor
+		// Empty constructor 
 	}
 
 	public int getId()
