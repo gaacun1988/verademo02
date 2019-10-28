@@ -20,7 +20,7 @@ build_job:
   script:
     - mvn clean package
   artifacts:
-    name: verademo_julian_10_build
+    name: ${CI_PROJECT_NAME}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}_build
     paths:
       - target/
     expire_in: 1 week
@@ -36,10 +36,12 @@ greenlight_job:
   dependencies:
     - build_job
   artifacts:
-    name: verademo_julian_10_greenlight-results
+    name: ${CI_PROJECT_NAME}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}_build
     paths:
       - results.json
       - results.txt
+    expire_in: 1 week
+    when: always
   script:
     - curl -O https://downloads.veracode.com/securityscan/gl-scanner-java-LATEST.zip
     - unzip gl-scanner-java-LATEST.zip gl-scanner-java.jar
@@ -50,12 +52,6 @@ greenlight_job:
       --source-dir "src/main/java/"
       --issue_details=true
       --summary_output=true
-  artifacts:
-    name: verademo_julian_10_greenlight-results
-    paths:
-      - results.json
-      - results.txt
-    when: always
 
 veracode-policy-scan:
     stage: scan
