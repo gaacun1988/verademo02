@@ -1,8 +1,14 @@
 stages:
+  - sca
   - build
   - greenlight
   - scan
  
+Software Composition Analysis:
+  stage: SCA
+  script:
+    - curl -sSL https://download.sourceclear.com/ci.sh | bash
+
 build_job:
   image: maven:3.6.0-jdk-8
   stage: build
@@ -23,7 +29,6 @@ build_job:
       - target/
       - .m2/repository
     
-  
 greenlight_job:
   stage: greenlight
   image: openjdk:8-jre
@@ -40,8 +45,8 @@ greenlight_job:
     - curl -O https://downloads.veracode.com/securityscan/gl-scanner-java-LATEST.zip
     - unzip gl-scanner-java-LATEST.zip gl-scanner-java.jar
     - java -jar gl-scanner-java.jar
-      --api_id $VERACODE_API_ID
-      --api_secret_key $VERACODE_API_KEY
+      --api_id ${VERACODE_API_ID}
+      --api_secret_key ${VERACODE_API_KEY}
       --build_dir "target/classes/"
       --source-dir "src/main/java/"
       --issue_details=true
