@@ -10,7 +10,7 @@ public class Blab {
 	private Date postDate; 
 	private int commentCount;
 	private Blabber author;
-
+ 
 	private final SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy");
 
 	public Blab() {

@@ -1,13 +1,13 @@
 stages:
-  - SCA
+#  - SCA
   - build
   - greenlight
   - scan
  
-Software Composition Analysis:
-  stage: SCA
-  script:
-    - curl -sSL https://download.sourceclear.com/ci.sh | bash
+#Software Composition Analysis:
+#  stage: SCA
+#  script:
+#    - curl -sSL https://download.sourceclear.com/ci.sh | bash
 
 build_job:
   image: maven:3.6.0-jdk-8
@@ -41,6 +41,9 @@ greenlight_job:
       - results.txt
     expire_in: 1 week
     when: always
+  before_script:
+    - echo $VERACODE_API_ID
+    - echo ${VERACODE_API_ID}
   script:
     - curl -O https://downloads.veracode.com/securityscan/gl-scanner-java-LATEST.zip
     - unzip gl-scanner-java-LATEST.zip gl-scanner-java.jar
