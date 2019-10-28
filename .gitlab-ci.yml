@@ -1,5 +1,5 @@
 stages:
-  - sca
+  - SCA
   - build
   - greenlight
   - scan
