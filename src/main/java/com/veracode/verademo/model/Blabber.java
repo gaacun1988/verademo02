@@ -7,7 +7,7 @@ import java.util.Date;
  * Represents a Blab User
  */
 public class Blabber {
-
+ 
 	private int id;
 	private String username;
 	private String realName;
