@@ -15,7 +15,9 @@ WORKDIR /opt/tomcat/webapps
 ADD /target/verademo.war verademo.war
 
 # install Python for scanning
-RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm
+RUN yum install -y \
+    https://repo.ius.io/ius-release-el7.rpm \
+    https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 RUN yum -y install --enablerepo=ius python36u python36u-libs python36u-devel python36u-pip
 RUN python3.6 -V
 
