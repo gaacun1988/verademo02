@@ -5,8 +5,8 @@ LABEL maintainer="ylerer@veracode.com"
 RUN mkdir /opt/tomcat/
 
 WORKDIR /opt/tomcat
-RUN curl -O https://apache.mirror.digitalpacific.com.au/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz
-RUN tar xzvf apache-tomcat-9.0.35.tar.gz
+RUN curl -O https://apache.mirror.digitalpacific.com.au/tomcat/tomcat-9/v9.0.36/bin/apache-tomcat-9.0.36.tar.gz
+RUN tar xzvf apache-tomcat-9.0.36.tar.gz
 RUN mv apache-tomcat-*/* /opt/tomcat/.
 RUN yum -y install java
 RUN java -version
