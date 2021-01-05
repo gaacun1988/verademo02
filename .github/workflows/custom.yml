@@ -1,4 +1,4 @@
-on: [watch]
+on: [workflow_dispatch]
 name: Custom flow
     
     
