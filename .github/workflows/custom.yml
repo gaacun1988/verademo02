@@ -1,1 +1,19 @@
-
+on: [watch]
+name: Custom flow
+    
+    
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest    
+    
+    steps:
+      - name: Invoke deployment hook
+        uses: distributhor/workflow-webhook@v1
+        env:
+          webhook_type: 'json-extended'
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+          data: '{ "weapon": "hammer", "drink" : "beer" }'
+    
