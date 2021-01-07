@@ -15,8 +15,5 @@ jobs:
           webhook_type: 'json-extended'
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
-          data: |
-            '{  "commit": "${{ github.sha }}", 
-            "run_id": "${{github.run_id}}","run_number": "${{github.run_number}}",
-            "veracode_app_name":"veracode-async", "veracode_sandbox_name:" : ""  }'
+          data: '{  "commit": "${{ github.sha }}","run_id": "${{github.run_id}}","run_number": "${{github.run_number}}","veracode_app_name":"veracode-async","veracode_sandbox_name:" : ""  }'
     
