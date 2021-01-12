@@ -53,12 +53,12 @@ jobs:
           # selected modules like from previous scan
           selectedpreviously: true
           createsandbox: true
-          sandboxname: 'lets see if it works 2'
+          sandboxname: 'lets see if it works'
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_type: 'json-extended'
           webhook_url: ${{ secrets.WEBHOOK_URL }}
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
-          data: '{"commit":"${{ github.sha }}","run_id":"${{github.run_id}}","run_number":"${{github.run_number}}","veracode_app_name":"veracode-async","veracode_sandbox_name":"lets see if it works 2"}'
+          data: '{"commit":"${{ github.sha }}","run_id":"${{github.run_id}}","run_number":"${{github.run_number}}","veracode_app_name":"veracode-async","veracode_sandbox_name":"lets see if it works"}'
          
