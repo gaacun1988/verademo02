@@ -60,6 +60,6 @@ jobs:
           webhook_type: 'json-extended'
           webhook_url: 'https://fda22nrtx7.execute-api.ap-southeast-2.amazonaws.com/dev/github'
           webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
-          data: '{"commit": "${{github.sha}}","run_id":"${{github.run_id}}", "veracode_app_name":"veracode-async"}' 
+          data: '{"commit": "${{github.sha}}","run_id":"${{github.run_id}}", "veracode_app_name":"veracode-async","veracode_sandbox_name":"lets see if it works"}' 
           #,"veracode_sandbox_name":"lets see if it works 3"}'
          
