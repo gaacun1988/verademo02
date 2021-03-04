@@ -53,7 +53,7 @@ jobs:
           # selected modules like from previous scan
           selectedpreviously: true
           #createsandbox: true
-          #sandboxname: 'lets see if it works'
+          sandboxname: 'lets see if it works 3'
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v1
         env:
