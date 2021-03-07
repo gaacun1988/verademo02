@@ -1,4 +1,5 @@
-# VeraDemo - Blab-a-Gag
+# VeraDemo - Blab-a-Gag 
+
 
 ## About now 34
 
@@ -25,7 +26,7 @@ Blab-a-Gag is a fairly simple forum type application which allows:
 `/register` allows you to create a new user account
 
 `/tools` shows a tools page that shows a fortune or lets you ping a host.
-   
+    
 ## Configure
 
 Build and installation requires [Maven](https://maven.apache.org), [MySQL](https://www.mysql.com/) and [Tomcat](https://tomcat.apache.org/).
