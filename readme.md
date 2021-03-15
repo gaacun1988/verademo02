@@ -1,3 +1,5 @@
+![Veracode SAST Policy compliance](https://42hjhn4qmh.execute-api.ap-southeast-2.amazonaws.com/dev/badge?appname=veracode-async)
+
 # VeraDemo - Blab-a-Gag 
 
 ## About 
