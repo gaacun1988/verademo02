@@ -1,4 +1,4 @@
-![Veracode SAST Policy compliance](https://42hjhn4qmh.execute-api.ap-southeast-2.amazonaws.com/dev/badge?appname=veracode-async)
+![Veracode SAST Policy compliance](https://42hjhn4qmh.execute-api.ap-southeast-2.amazonaws.com/dev/badge?appname=veracode-async&kill_cache=1)
 
 # VeraDemo - Blab-a-Gag 
 
