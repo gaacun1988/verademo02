@@ -35,7 +35,7 @@ jobs:
         uses: veracode/veracode-uploadandscan-action@0.2.1
         with:
           # appname
-          appname: veracode-async
+          appname: veracode Level 3
           # createprofile
           createprofile: true
           # filepath
@@ -52,8 +52,8 @@ jobs:
           criticality: High
           # selected modules like from previous scan
           selectedpreviously: true
-          #createsandbox: true
-          sandboxname: 'lets see if it works 2'
+          createsandbox: true
+          sandboxname: 'Level 3'
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v1
         env:
