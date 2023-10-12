@@ -36,7 +36,7 @@ jobs:
         with:
           # appname
           appname: veracode-async
-          # createprofile
+          #createprofile
           createprofile: true
           # filepath
           filepath: ./target/verademo.war
@@ -52,8 +52,8 @@ jobs:
           criticality: High
           # selected modules like from previous scan
           selectedpreviously: true
-          #createsandbox: true
-          sandboxname: 'test2'
+          createsandbox: true
+          sandboxname: 'test1'
       - name: Invoke deployment hook
         uses: distributhor/workflow-webhook@v1
         env:
